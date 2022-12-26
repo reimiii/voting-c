@@ -46,24 +46,17 @@
                     </button>
                 </div>
             </div>
-            <div class="flex px-2 py-6">
+            <div class="flex flex-1 px-2 py-6">
                 <a href="#" class="flex-none">
                     <img src="https://www.gravatar.com/avatar/1ad9895520cab3bec5d2bcfcb09da540?size=200&d=retro"
                          alt="avatar" class="w-14 h-14 rounded-xl">
                 </a>
-                <div class="mx-4">
+                <div class="w-full mx-4">
                     <h4 class="text-xl font-semibold">
                         <a href="#" class="hover:underline">Laravel Is Fun? or Cum?</a>
                     </h4>
                     <div class="text-gray-600 mt-3 line-clamp-3">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum possimus quasi reprehenderit earum
-                        incidunt. Ad reprehenderit repudiandae dolorem ducimus modi accusamus beatae perferendis? Eum
-                        eligendi nulla aliquam numquam! Nobis, tempore rerum autem accusamus perspiciatis laudantium at
-                        excepturi sint placeat nulla beatae qui aliquam quibusdam corrupti vel dolor praesentium quam
-                        dolore itaque deleniti quod in ut earum. Cum fuga ea molestias nesciunt soluta sint maxime,
-                        magnam dolorum reprehenderit autem, vel ipsa? Vitae vel quos quaerat, fugit in reiciendis alias
-                        perspiciatis esse numquam facere cum veniam beatae voluptatem eos amet vero laborum error. Dolor
-                        distinctio temporibus iure, repellendus porro molestiae deleniti quibusdam?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum possimus quasi
                     </div>
 
                     <div class="flex items-center justify-between mt-6">
@@ -80,7 +73,7 @@
                                 Open
                             </div>
                             <button
-                                class="relative bg-gray-100 hover:bg-gray-200 rounded-full h-7 transition duration-150 ease-in py-2 px-3">
+                                class="relative bg-gray-100 hover:bg-gray-200 border rounded-full h-7 transition duration-150 ease-in py-2 px-3">
                                 <svg fill="currentColor" width="24" height="6">
                                     <path
                                         d="M2.97.061A2.969 2.969 0 000 3.031 2.968 2.968 0 002.97 6a2.97 2.97 0 100-5.94zm9.184 0a2.97 2.97 0 100 5.939 2.97 2.97 0 100-5.939zm8.877 0a2.97 2.97 0 10-.003 5.94A2.97 2.97 0 0021.03.06z"

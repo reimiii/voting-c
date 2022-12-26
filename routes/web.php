@@ -14,9 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+//Route::get('/', function () {
+//    return view('index');
+//});
+Route::view('/', 'index');
+Route::view('idea', 'show');
 
 
 Route::middleware('auth')->group(function () {
