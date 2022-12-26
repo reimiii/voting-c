@@ -13,14 +13,22 @@
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="font-sans text-gray-900 text-sm">
+<body class="font-sans bg-gray-background text-gray-900 text-sm">
 <header class="flex items-center justify-between px-8 py-4">
-    <a href="#">SUMMER SUNSET logo</a>
+    <a href="#"><img src="{{ Vite::asset('resources/images/final.svg') }}" alt=""></a>
     <div class="flex items-center">
         @if (Route::has('login'))
             <div class="px-6 py-4">
                 @auth
-                    <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+
+                        <a href="{{ route('logout') }}"
+                           onclick="event.preventDefault();
+                                                this.closest('form').submit();">
+                            {{ __('Log Out') }}
+                        </a>
+                    </form>
                 @else
                     <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
 
@@ -33,10 +41,31 @@
         @endif
         <a href="#">
             <img
-                src="https://secure.gravatar.com/avatar/1ad9895520cab3bec5d2bcfcb09da540?size=80&default=wavatar&rating=g"
+                src="https://www.gravatar.com/avatar/1ad9895520cab3bec5d2bcfcb09da540?size=200&d=retro"
                 alt="avatar" class="w-10 h-10 rounded-full">
         </a>
     </div>
 </header>
+
+<main class="container mx-auto flex max-w-custom">
+    <div class="w-70 mr-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae blanditiis cum in ipsa itaque, magnam modi
+        provident saepe totam! Architecto autem consequuntur deserunt eligendi illum quaerat quibusdam quod soluta.
+        Quas. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam consectetur cumque dolorum ducimus exercitationem fuga incidunt ipsa ipsum laudantium minus, nihil nisi pariatur perspiciatis quasi quos soluta suscipit vitae?
+    </div>
+    <div class="w-175">
+        <nav class="flex items-center justify-between text-xs">
+            <ul class="flex uppercase font-semibold space-x-10 border-b-4 pb-3">
+                <li><a href="#" class="border-b-4 pb-3 border-blue">All Ideas (23)</a></li>
+                <li><a href="#" class="text-gray-400 transition duration-150 ease-in border-b-4 pb-3 hover:border-blue">Considering (9)</a></li>
+                <li><a href="#" class="text-gray-400 transition duration-150 ease-in border-b-4 pb-3 hover:border-blue">In Progress (5)</a></li>
+            </ul>
+            <ul class="flex uppercase font-semibold space-x-10 border-b-4 pb-3">
+                <li><a href="#" class="text-gray-400 transition duration-150 ease-in border-b-4 pb-3 hover:border-blue">Implemented (9)</a></li>
+                <li><a href="#" class="text-gray-400 transition duration-150 ease-in border-b-4 pb-3 hover:border-blue">Closed (5)</a></li>
+            </ul>
+        </nav>
+    </div>
+</main>
+
 </body>
 </html>
